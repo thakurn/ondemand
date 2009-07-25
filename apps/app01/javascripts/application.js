@@ -19,7 +19,9 @@ function $get(key) {
  
  var InsertProduct = function() {
  
- var row = "<tr width='100%'>";
+ odlib.add_header_button('Call Detail',2,'NILESH','test()',_top,40);
+ 
+var row = "<tr width='100%'>";
 row += "<td>Product: <select><option></option><option>Singulair</option><option>Hyzaar</option></td>";
 row += "<td>Priority: <input type='text' size='1'></input></td>";
 row += "<td>Indication: <select><option></option><option>Allergy</option><option>Asthma</option></td>";
@@ -33,17 +35,25 @@ html += "<table id='mrk_details'>";
 html += row;
 html += "</table>";
 html += "</div>";
+
+
  
 var e = jQuery("[class='buttonChildTitleBarTD']").filter("[id^='CallsProdDetail']").get(0);
 e.onclick = function() {};
-jQuery("[class='buttonChildTitleBarTD']").filter("[id^='CallsProdDetail']").click(function() {
-if ( jQuery("#mrk_details").size() === 0 ) {
-jQuery("#CallsProdDetailChildListDiv").next().replaceWith(html);
-} else {
-jQuery("#mrk_details").append(row);
-}
+
+jQuery("[class='buttonChildTitleBarTD']").filter("[id^='CallsProdDetail']").click(function() 
+{
+	if ( jQuery("#mrk_details").size() === 0 ) 
+	{
+	jQuery("#CallsProdDetailChildListDiv").next().replaceWith(html);
+	} 
+	else 
+	{
+	jQuery("#mrk_details").append(row);
+	}
 });
 };
+
 //Trying to Populate the Subject Field
  var copyPreviousSubjectHandler = function() {
         var ownerId = $get('ContactCallInsert.Owner Id').val();
