@@ -19,7 +19,7 @@ function $get(key) {
  
  var InsertProduct = function() {
  
- odlib.add_header_button('Call Detail',2,'NILESH','test()',_top,40);
+ odlib.add_header_button('Call Detail',2,'NILESH','https://secure-ausomxapa.crmondemand.com/OnDemand/user/Homepage','_top',40);
  
 var row = "<tr width='100%'>";
 row += "<td>Product: <select><option></option><option>Singulair</option><option>Hyzaar</option></td>";
